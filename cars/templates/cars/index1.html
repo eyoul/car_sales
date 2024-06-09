@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block header %}
+{% endblock %}
+
+{% block content %}
+    <div class="used">
+        <h2>Used Cars</h2>
+    </div>  
+    {% for car in cars %}
+    <div class="box">
+        {#<img src="{{ url_for('static', filename=car.image) }}">#}
+        <p>{{ car.year }} {{ car.name }} {{ car.model }}</p>
+        <button class="but">{{ car.fuel_type }}</button>
+        <button class="butt">{{ car.km }}km</button>
+        <button class="butt">{{ car.transmission }}</button></br>
+        <button class="but">{{ car.color }}</button>
+        <button class="but">{{ car.price }}</button>
+    </div>    
+    {% endfor %}
+
+    <div class="cl"><h2>New Cars</h2></div>
+    <!-- Additional car listings for new cars -->
+    <div class="cl"><h2>OWNER</h2></div>
+    <!-- Owner information -->
+{% endblock %}
