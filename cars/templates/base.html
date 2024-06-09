@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %} - Car Sales</title>
+        <meta name="viewport" content="width-device-width, intial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+       {# <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+        <!-- <link href="{% static 'cars/home.css' %}" rel="stylesheet"></a> -->#}  
+    </head>
+    <body>
+        <div id="nav1">
+            <div class="navbar">
+                <ul>
+                    {% if g.user %}
+                    <li><span>{{ g.user['username'] }}</span>
+                    <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
+                    {% else %}
+                    <li><a href="{{ url_for('auth.register') }}">Register</a>
+                    <li><a href="{{ url_for('auth.login') }}">Log In</a>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#cars">cars</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            {% block contentone %}{% endblock %}
+        </div>
+        
+
+        <section class="content">
+            <header>
+            {% block header %}{% endblock %}
+            </header>
+            {% for message in get_flashed_messages() %}
+              <div class="flash">{{ message }}</div>
+            {% endfor %}
+            
+          </section>
+          {% block content %}{% endblock %}
+          
+</html>
