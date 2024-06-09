@@ -1,0 +1,84 @@
+
+{% extends 'base.html' %}
+{% block header %}
+{% endblock %}
+
+{% block content %}
+    <div class="used">
+        <h2>Used Cars</h2>
+    </div>  
+    {#{% for car in cars %}{% endfor %}#}
+    <div class="box">
+        <img src="{{ url_for('static', filename='images/rav4.jpg') }}">
+        <p>2021 rav4</p>
+        <button class="but">petrol</button>
+        <button class="butt">12,500km</button>
+        <button class="butt">automatic</button></br>
+        <button class="but">black</button>
+        <button class="but">black</button>
+    </div>    
+  
+
+    <div class="box">
+        <img src="{{ url_for('static', filename='images/rav4.jpg') }}">
+        <p>2021 rav4</p>
+        <button class="but">petrol</button>
+        <button class="butt">12,500km</button>
+        <button class="butt">automatic</button></br>
+        <button class="but">black</button>
+        <button class="but">black</button>       
+    </div>
+
+    <div class="box">
+        <img src="{{ url_for('static', filename='images/co.jpeg') }}">
+        <p>2021 Corolla</p>
+        <button class="but">petrol</button>
+        <button class="butt">12,500km</button>
+        <button class="butt">automatic</button></br>
+        <button class="but">black</button>
+        <button class="but">black</button>
+    </div>
+    <div class="box">
+        <img src="{{ url_for('static', filename='images/hi.jpeg') }}">
+        <p>2021 Hilux</p>
+        <button class="but">petrol</button>
+        <button class="butt">12,500km</button>
+        <button class="butt">automatic</button></br>
+        <button class="but">black</button>
+        <button class="but">black</button>
+    </div>
+    <div class="cl"><h2>New Cars</h2></div>
+    <div class="box">
+        <img src="{{ url_for('static', filename='images/v81.jpeg') }}">
+        <p>2024 Toyota Landcruiser</p>
+        <button class="but">petrol</button>
+        <button class="butt">12,500km</button>
+        <button class="butt">automatic</button></br>
+        <button class="but">black</button>
+        <button class="but">black</button>
+    </div>
+    <div class="box">
+        <img src="{{ url_for('static', filename='images/cadi.jpeg') }}">
+        <p>2024 Cadillac</p>
+        <button class="but">petrol</button>
+        <button class="butt">12,500km</button>
+        <button class="butt">automatic</button></br>
+        <button class="but">black</button>
+        <button class="but">black</button>
+    </div>
+    <div class="box">
+        <img src="{{ url_for('static', filename='images/gmc.jpeg') }}">
+        <p>2024 Gmc</p>
+        <button class="but">petrol</button>
+        <button class="butt">12,500km</button>
+        <button class="butt">automatic</button></br>
+        <button class="but">black</button>
+        <button class="but">black</button>
+    </div>
+    <div class="cl"><h2>OWNER</h2></div>
+    <div class="box">
+        <img src="{{ url_for('static', filename='images/rav4.jpg') }}">
+        <p>Hannan</p>
+    </div>
+    </div>
+{% endblock %}
